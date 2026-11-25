@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://cg1xusxkmj5dt"]
 
-[ext_resource type="Script" uid="uid://by2ktvd0tcono" path="res://MainMenu.cs" id="1_dnfjo"]
+[ext_resource type="Script" uid="uid://by2ktvd0tcono" path="res://Scenes/MainPage/MainMenu.cs" id="1_dnfjo"]
 [ext_resource type="Texture2D" uid="uid://b1e5j7bygpdm" path="res://Images/2D_pixelart_starfield_detail_image.png" id="1_wugcc"]
 [ext_resource type="FontFile" uid="uid://bkorkpdg0a6hg" path="res://Images/SpaceNova-FONT.otf" id="2_gtid3"]
 [ext_resource type="Texture2D" uid="uid://bpvj2exc1j5an" path="res://Images/button-svgrepo-com.svg" id="3_gtid3"]
-[ext_resource type="StyleBox" uid="uid://ui23kyt0ssr4" path="res://LevelButtonNormal.tres" id="5_5cvai"]
+[ext_resource type="StyleBox" uid="uid://ui23kyt0ssr4" path="res://fonts/LevelButtonNormal.tres" id="5_5cvai"]
 [ext_resource type="Texture2D" uid="uid://bst6o6b4rah48" path="res://Images/close.svg" id="5_257up"]
-[ext_resource type="FontVariation" uid="uid://bs1viodlsicr" path="res://LevelDoubleFont.tres" id="6_3mro0"]
-[ext_resource type="StyleBox" uid="uid://bgqkn00k8j4km" path="res://LevelButtonHover.tres" id="6_domf7"]
-[ext_resource type="StyleBox" uid="uid://cs8fl0qie0658" path="res://LevelButtonPressed.tres" id="6_es6ti"]
+[ext_resource type="FontVariation" uid="uid://bs1viodlsicr" path="res://fonts/LevelDoubleFont.tres" id="6_3mro0"]
+[ext_resource type="StyleBox" uid="uid://bgqkn00k8j4km" path="res://fonts/LevelButtonHover.tres" id="6_domf7"]
+[ext_resource type="StyleBox" uid="uid://cs8fl0qie0658" path="res://fonts/LevelButtonPressed.tres" id="6_es6ti"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_n64fp"]
 font = ExtResource("2_gtid3")

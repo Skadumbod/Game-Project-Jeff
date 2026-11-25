@@ -20,7 +20,7 @@ public override void _Ready()
 
 private void _on_tutorial_button_pressed()
 	{
-		GetTree().ChangeSceneToFile("res://Tutorial_Page.tscn");
+		GetTree().ChangeSceneToFile("res://Scenes/Tutorial/Tutorial_Page.tscn");
 	}
 private void _on_story_open_pressed()
 	{

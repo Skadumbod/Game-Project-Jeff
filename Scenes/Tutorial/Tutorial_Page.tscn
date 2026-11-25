@@ -1,13 +1,13 @@
 [gd_scene format=4 uid="uid://bcx0f04mr1i8p"]
 
 [ext_resource type="PackedScene" uid="uid://bnaqmrk51xc7k" path="res://Background.tscn" id="1_71c18"]
-[ext_resource type="Script" uid="uid://bbeah221iykfq" path="res://TutorialPage.cs" id="1_mxebk"]
+[ext_resource type="Script" uid="uid://bbeah221iykfq" path="res://Scenes/Tutorial/TutorialPage.cs" id="1_mxebk"]
 [ext_resource type="Texture2D" uid="uid://cvmm5a8glp75l" path="res://TileSet/PNG_Tiled/Road3_ground.png" id="1_yf37k"]
-[ext_resource type="PackedScene" uid="uid://d2ybi2erw5ppc" path="res://SpaceShip/SpaceShip.tscn" id="2_mi2i3"]
+[ext_resource type="PackedScene" uid="uid://d2ybi2erw5ppc" path="res://Scenes/SpaceShip/SpaceShip.tscn" id="2_mi2i3"]
 [ext_resource type="Shader" uid="uid://de6s86kwrgkn8" path="res://TileMapLayer2.gdshader" id="3_lqsxs"]
 [ext_resource type="Texture2D" uid="uid://da6a01472hj74" path="res://TileSet/PNG_Tiled/Road5.png" id="4_doail"]
-[ext_resource type="LabelSettings" uid="uid://cq1yjyblo1kji" path="res://Tutorial_Label_settings.tres" id="5_0n3dv"]
-[ext_resource type="PackedScene" uid="uid://b8gcawqxe3qnj" path="res://PickupBolt.tscn" id="5_doail"]
+[ext_resource type="LabelSettings" uid="uid://cq1yjyblo1kji" path="res://fonts/Tutorial_Label_settings.tres" id="5_0n3dv"]
+[ext_resource type="PackedScene" uid="uid://b8gcawqxe3qnj" path="res://Pickups/PickupBolt.tscn" id="5_doail"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_n64fp"]
 shader = ExtResource("3_lqsxs")

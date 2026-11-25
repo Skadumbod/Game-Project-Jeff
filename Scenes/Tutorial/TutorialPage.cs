@@ -17,7 +17,7 @@ public partial class TutorialPage : Node2D
 			GD.Print("Good Job!You have collected 3 bolts!");
 			await ToSignal(GetTree().CreateTimer(2.0), SceneTreeTimer.SignalName.Timeout);
 			GD.Print("Returning to Main Menu...");
-			GetTree().ChangeSceneToFile("res://Main_Menu.tscn");
+			GetTree().ChangeSceneToFile("res://Scenes/MainPage/Main_Menu.tscn");
 		}
 	}
 }

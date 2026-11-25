@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b8gcawqxe3qnj"]
 
-[ext_resource type="Script" uid="uid://85a5aeah43hy" path="res://PickupBolt.cs" id="1_ajq1y"]
+[ext_resource type="Script" uid="uid://85a5aeah43hy" path="res://Pickups/PickupBolt.cs" id="1_ajq1y"]
 [ext_resource type="Texture2D" uid="uid://do3250l7bjfwx" path="res://Images/bolt2png.png" id="2_ta4r4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n64fp"]

@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://d2ybi2erw5ppc"]
 
-[ext_resource type="Script" uid="uid://70pipweykcdn" path="res://SpaceShip/SpaceshipBody.cs" id="1_n7683"]
-[ext_resource type="Texture2D" uid="uid://4j3620p5kgmq" path="res://SpaceShip/Rocketship-1--NicholasJudy456.svg" id="2_n7683"]
-[ext_resource type="Texture2D" uid="uid://ceyxm625x746n" path="res://SpaceShip/racing_flame.svg" id="3_mxenu"]
+[ext_resource type="Script" uid="uid://70pipweykcdn" path="res://Scenes/SpaceShip/SpaceshipBody.cs" id="1_n7683"]
+[ext_resource type="Texture2D" uid="uid://4j3620p5kgmq" path="res://Scenes/SpaceShip/Rocketship-1--NicholasJudy456.svg" id="2_n7683"]
+[ext_resource type="Texture2D" uid="uid://ceyxm625x746n" path="res://Scenes/SpaceShip/racing_flame.svg" id="3_mxenu"]
 [ext_resource type="AudioStream" uid="uid://da0e7bw0r68jl" path="res://SoundEffects/jci21-rocket-launch-sfx-253937.mp3" id="4_oa4mn"]
 
 [node name="SpaceShip" type="CharacterBody2D" unique_id=748652188]
