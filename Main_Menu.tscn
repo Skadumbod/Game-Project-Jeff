@@ -1,0 +1,835 @@
+[gd_scene format=3 uid="uid://cg1xusxkmj5dt"]
+
+[ext_resource type="Script" uid="uid://by2ktvd0tcono" path="res://MainMenu.cs" id="1_dnfjo"]
+[ext_resource type="Texture2D" uid="uid://b1e5j7bygpdm" path="res://Images/2D_pixelart_starfield_detail_image.png" id="1_wugcc"]
+[ext_resource type="FontFile" uid="uid://bkorkpdg0a6hg" path="res://Images/SpaceNova-FONT.otf" id="2_gtid3"]
+[ext_resource type="Texture2D" uid="uid://bpvj2exc1j5an" path="res://Images/button-svgrepo-com.svg" id="3_gtid3"]
+[ext_resource type="StyleBox" uid="uid://ui23kyt0ssr4" path="res://LevelButtonNormal.tres" id="5_5cvai"]
+[ext_resource type="Texture2D" uid="uid://bst6o6b4rah48" path="res://Images/close.svg" id="5_257up"]
+[ext_resource type="FontVariation" uid="uid://bs1viodlsicr" path="res://LevelDoubleFont.tres" id="6_3mro0"]
+[ext_resource type="StyleBox" uid="uid://bgqkn00k8j4km" path="res://LevelButtonHover.tres" id="6_domf7"]
+[ext_resource type="StyleBox" uid="uid://cs8fl0qie0658" path="res://LevelButtonPressed.tres" id="6_es6ti"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_n64fp"]
+font = ExtResource("2_gtid3")
+font_size = 64
+outline_size = 4
+outline_color = Color(0.89897513, 0.52123785, 0.19056931, 1)
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 0.3764706)
+shadow_offset = Vector2(6, -3)
+
+[sub_resource type="FontVariation" id="FontVariation_3mro0"]
+base_font = ExtResource("2_gtid3")
+spacing_glyph = 3
+
+[sub_resource type="LabelSettings" id="LabelSettings_yipmn"]
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_ahfwt"]
+font = ExtResource("2_gtid3")
+font_size = 40
+font_color = Color(0.9163782, 0.54233074, 0.19945371, 1)
+
+[node name="Control" type="Control" unique_id=527942697]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dnfjo")
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=1371462961]
+repeat_size = Vector2(100, 100)
+autoscroll = Vector2(6, 2)
+repeat_times = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=1678625371]
+position = Vector2(566, 319)
+scale = Vector2(2, 2)
+texture = ExtResource("1_wugcc")
+
+[node name="Label" type="Label" parent="." unique_id=142660791]
+layout_mode = 0
+offset_left = 255.0
+offset_top = 80.0
+offset_right = 891.0
+offset_bottom = 148.0
+text = "Project Jeff"
+label_settings = SubResource("LabelSettings_n64fp")
+
+[node name="LevelsButton" type="Button" parent="." unique_id=1353251559]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -94.0
+offset_right = 121.0
+offset_bottom = -44.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="LevelsButton" unique_id=1009494414]
+custom_maximum_size = Vector2(1000, -1)
+layout_mode = 0
+offset_top = -35.0
+offset_right = 800.0
+offset_bottom = 765.0
+scale = Vector2(0.37, 0.17)
+mouse_filter = 2
+texture = ExtResource("3_gtid3")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="LevelsButton" unique_id=2004273286]
+layout_mode = 0
+offset_left = 103.0
+offset_top = 18.0
+offset_right = 180.0
+offset_bottom = 41.0
+text = "LEVELS"
+horizontal_alignment = 1
+
+[node name="CanvasLayerLevels" type="CanvasLayer" parent="." unique_id=377283217]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayerLevels" unique_id=161876235]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayerLevels" unique_id=1259502631]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -267.0
+offset_top = -93.0
+offset_right = 266.0
+offset_bottom = 242.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.0
+theme_override_constants/h_separation = 39
+theme_override_constants/v_separation = 28
+columns = 5
+
+[node name="Button1" type="Button" parent="CanvasLayerLevels/GridContainer" unique_id=341959770]
+self_modulate = Color(1, 1, 1, 0.9019608)
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9163782, 0.54233074, 0.19945371, 1)
+theme_override_colors/font_outline_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
+theme_override_fonts/font = ExtResource("2_gtid3")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = ExtResource("5_5cvai")
+theme_override_styles/pressed = ExtResource("6_es6ti")
+theme_override_styles/hover = ExtResource("6_domf7")
+
+[node name="Label" type="Label" parent="CanvasLayerLevels/GridContainer/Button1" unique_id=102294879]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.53300005
+anchor_right = 0.5
+anchor_bottom = 0.53300005
+offset_left = -16.500008
+offset_top = -28.97501
+offset_right = 13.269218
+offset_bottom = 20.02499
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 1.2)
+theme_override_colors/font_color = Color(0.9163782, 0.54233074, 0.19945371, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.43529412)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("2_gtid3")
+theme_override_font_sizes/font_size = 42
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button2" type="Button" parent="CanvasLayerLevels/GridContainer" unique_id=2086677391]
+self_modulate = Color(1, 1, 1, 0.9019608)
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9163782, 0.54233074, 0.19945371, 1)
+theme_override_colors/font_outline_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
+theme_override_fonts/font = ExtResource("2_gtid3")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = ExtResource("5_5cvai")
+theme_override_styles/pressed = ExtResource("6_es6ti")
+theme_override_styles/hover = ExtResource("6_domf7")
+
+[node name="Label" type="Label" parent="CanvasLayerLevels/GridContainer/Button2" unique_id=879784398]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.541
+anchor_right = 0.5
+anchor_bottom = 0.541
+offset_left = -22.500008
+offset_top = -29.575008
+offset_right = 38.694023
+offset_bottom = 19.424992
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.67, 1.2)
+theme_override_colors/font_color = Color(0.9163782, 0.54233074, 0.19945371, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.43529412)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("2_gtid3")
+theme_override_font_sizes/font_size = 42
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button3" type="Button" parent="CanvasLayerLevels/GridContainer" unique_id=1819159564]
+self_modulate = Color(1, 1, 1, 0.9019608)
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9163782, 0.54233074, 0.19945371, 1)
+theme_override_colors/font_outline_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
+theme_override_fonts/font = ExtResource("2_gtid3")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = ExtResource("5_5cvai")
+theme_override_styles/pressed = ExtResource("6_es6ti")
+theme_override_styles/hover = ExtResource("6_domf7")
+
+[node name="Label" type="Label" parent="CanvasLayerLevels/GridContainer/Button3" unique_id=638032215]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.53300005
+anchor_right = 0.5
+anchor_bottom = 0.541
+offset_left = -22.500008
+offset_top = -28.97501
+offset_right = 38.694023
+offset_bottom = 19.424992
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.67, 1.2)
+theme_override_colors/font_color = Color(0.9163782, 0.54233074, 0.19945371, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.43529412)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("2_gtid3")
+theme_override_font_sizes/font_size = 42
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button4" type="Button" parent="CanvasLayerLevels/GridContainer" unique_id=1800477326]
+self_modulate = Color(1, 1, 1, 0.9019608)
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9163782, 0.54233074, 0.19945371, 1)
+theme_override_colors/font_outline_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
+theme_override_fonts/font = ExtResource("2_gtid3")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = ExtResource("5_5cvai")
+theme_override_styles/pressed = ExtResource("6_es6ti")
+theme_override_styles/hover = ExtResource("6_domf7")
+
+[node name="Label" type="Label" parent="CanvasLayerLevels/GridContainer/Button4" unique_id=1614918134]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.53300005
+anchor_right = 0.5
+anchor_bottom = 0.541
+offset_left = -22.500008
+offset_top = -28.97501
+offset_right = 38.694023
+offset_bottom = 19.424992
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.67, 1.2)
+theme_override_colors/font_color = Color(0.9163782, 0.54233074, 0.19945371, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.43529412)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("2_gtid3")
+theme_override_font_sizes/font_size = 42
+text = "4"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button5" type="Button" parent="CanvasLayerLevels/GridContainer" unique_id=1627955732]
+self_modulate = Color(1, 1, 1, 0.9019608)
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9163782, 0.54233074, 0.19945371, 1)
+theme_override_colors/font_outline_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
+theme_override_fonts/font = ExtResource("2_gtid3")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = ExtResource("5_5cvai")
+theme_override_styles/pressed = ExtResource("6_es6ti")
+theme_override_styles/hover = ExtResource("6_domf7")
+
+[node name="Label" type="Label" parent="CanvasLayerLevels/GridContainer/Button5" unique_id=1046917383]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.53300005
+anchor_right = 0.5
+anchor_bottom = 0.541
+offset_left = -22.500008
+offset_top = -28.97501
+offset_right = 38.694023
+offset_bottom = 19.424992
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.67, 1.2)
+theme_override_colors/font_color = Color(0.9163782, 0.54233074, 0.19945371, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.43529412)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("2_gtid3")
+theme_override_font_sizes/font_size = 42
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button6" type="Button" parent="CanvasLayerLevels/GridContainer" unique_id=2119621174]
+self_modulate = Color(1, 1, 1, 0.9019608)
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9163782, 0.54233074, 0.19945371, 1)
+theme_override_colors/font_outline_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
+theme_override_fonts/font = ExtResource("2_gtid3")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = ExtResource("5_5cvai")
+theme_override_styles/pressed = ExtResource("6_es6ti")
+theme_override_styles/hover = ExtResource("6_domf7")
+
+[node name="Label" type="Label" parent="CanvasLayerLevels/GridContainer/Button6" unique_id=150834300]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.53300005
+anchor_right = 0.5
+anchor_bottom = 0.541
+offset_left = -22.500008
+offset_top = -28.97501
+offset_right = 38.694023
+offset_bottom = 19.424992
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.67, 1.2)
+theme_override_colors/font_color = Color(0.9163782, 0.54233074, 0.19945371, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.43529412)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("2_gtid3")
+theme_override_font_sizes/font_size = 42
+text = "6"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button7" type="Button" parent="CanvasLayerLevels/GridContainer" unique_id=641024641]
+self_modulate = Color(1, 1, 1, 0.9019608)
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9163782, 0.54233074, 0.19945371, 1)
+theme_override_colors/font_outline_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
+theme_override_fonts/font = ExtResource("2_gtid3")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = ExtResource("5_5cvai")
+theme_override_styles/pressed = ExtResource("6_es6ti")
+theme_override_styles/hover = ExtResource("6_domf7")
+
+[node name="Label" type="Label" parent="CanvasLayerLevels/GridContainer/Button7" unique_id=991837320]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.53300005
+anchor_right = 0.5
+anchor_bottom = 0.541
+offset_left = -22.500008
+offset_top = -28.97501
+offset_right = 38.694023
+offset_bottom = 19.424992
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.67, 1.2)
+theme_override_colors/font_color = Color(0.9163782, 0.54233074, 0.19945371, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.43529412)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("2_gtid3")
+theme_override_font_sizes/font_size = 42
+text = "7"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button8" type="Button" parent="CanvasLayerLevels/GridContainer" unique_id=1898004671]
+self_modulate = Color(1, 1, 1, 0.9019608)
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9163782, 0.54233074, 0.19945371, 1)
+theme_override_colors/font_outline_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
+theme_override_fonts/font = ExtResource("2_gtid3")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = ExtResource("5_5cvai")
+theme_override_styles/pressed = ExtResource("6_es6ti")
+theme_override_styles/hover = ExtResource("6_domf7")
+
+[node name="Label" type="Label" parent="CanvasLayerLevels/GridContainer/Button8" unique_id=2144541036]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.53300005
+anchor_right = 0.5
+anchor_bottom = 0.541
+offset_left = -22.500008
+offset_top = -28.97501
+offset_right = 38.694023
+offset_bottom = 19.424992
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.67, 1.2)
+theme_override_colors/font_color = Color(0.9163782, 0.54233074, 0.19945371, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.43529412)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("2_gtid3")
+theme_override_font_sizes/font_size = 42
+text = "8"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button9" type="Button" parent="CanvasLayerLevels/GridContainer" unique_id=1170717954]
+self_modulate = Color(1, 1, 1, 0.9019608)
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9163782, 0.54233074, 0.19945371, 1)
+theme_override_colors/font_outline_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
+theme_override_fonts/font = ExtResource("2_gtid3")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = ExtResource("5_5cvai")
+theme_override_styles/pressed = ExtResource("6_es6ti")
+theme_override_styles/hover = ExtResource("6_domf7")
+
+[node name="Label" type="Label" parent="CanvasLayerLevels/GridContainer/Button9" unique_id=262461249]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.53300005
+anchor_right = 0.5
+anchor_bottom = 0.541
+offset_left = -22.500008
+offset_top = -27.97501
+offset_right = 38.694023
+offset_bottom = 20.424992
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.67, 1.2)
+theme_override_colors/font_color = Color(0.9163782, 0.54233074, 0.19945371, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.43529412)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("2_gtid3")
+theme_override_font_sizes/font_size = 42
+text = "9"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button10" type="Button" parent="CanvasLayerLevels/GridContainer" unique_id=1052051392]
+self_modulate = Color(1, 1, 1, 0.9019608)
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9163782, 0.54233074, 0.19945371, 1)
+theme_override_colors/font_outline_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
+theme_override_fonts/font = ExtResource("2_gtid3")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = ExtResource("5_5cvai")
+theme_override_styles/pressed = ExtResource("6_es6ti")
+theme_override_styles/hover = ExtResource("6_domf7")
+
+[node name="Label" type="Label" parent="CanvasLayerLevels/GridContainer/Button10" unique_id=1756985708]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.53300005
+anchor_right = 0.5
+anchor_bottom = 0.541
+offset_left = -22.500008
+offset_top = -28.97501
+offset_right = 38.694023
+offset_bottom = 19.424992
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.67, 1.2)
+theme_override_colors/font_color = Color(0.9163782, 0.54233074, 0.19945371, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.43529412)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("6_3mro0")
+theme_override_font_sizes/font_size = 42
+text = "10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button11" type="Button" parent="CanvasLayerLevels/GridContainer" unique_id=1728632825]
+self_modulate = Color(1, 1, 1, 0.9019608)
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9163782, 0.54233074, 0.19945371, 1)
+theme_override_colors/font_outline_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
+theme_override_fonts/font = ExtResource("2_gtid3")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = ExtResource("5_5cvai")
+theme_override_styles/pressed = ExtResource("6_es6ti")
+theme_override_styles/hover = ExtResource("6_domf7")
+
+[node name="Label" type="Label" parent="CanvasLayerLevels/GridContainer/Button11" unique_id=1234031211]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.53300005
+anchor_right = 0.5
+anchor_bottom = 0.541
+offset_left = -20.500008
+offset_top = -28.97501
+offset_right = 40.694023
+offset_bottom = 19.424992
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.67, 1.2)
+theme_override_colors/font_color = Color(0.9163782, 0.54233074, 0.19945371, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.43529412)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = SubResource("FontVariation_3mro0")
+theme_override_font_sizes/font_size = 42
+text = "11"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button12" type="Button" parent="CanvasLayerLevels/GridContainer" unique_id=1151046209]
+self_modulate = Color(1, 1, 1, 0.9019608)
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9163782, 0.54233074, 0.19945371, 1)
+theme_override_colors/font_outline_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
+theme_override_fonts/font = ExtResource("2_gtid3")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = ExtResource("5_5cvai")
+theme_override_styles/pressed = ExtResource("6_es6ti")
+theme_override_styles/hover = ExtResource("6_domf7")
+
+[node name="Label" type="Label" parent="CanvasLayerLevels/GridContainer/Button12" unique_id=1735459579]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.53300005
+anchor_right = 0.5
+anchor_bottom = 0.541
+offset_left = -20.500008
+offset_top = -29.97501
+offset_right = 40.694023
+offset_bottom = 18.424992
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.67, 1.2)
+theme_override_colors/font_color = Color(0.9163782, 0.54233074, 0.19945371, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.43529412)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("6_3mro0")
+theme_override_font_sizes/font_size = 42
+text = "12"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button13" type="Button" parent="CanvasLayerLevels/GridContainer" unique_id=993398126]
+self_modulate = Color(1, 1, 1, 0.9019608)
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9163782, 0.54233074, 0.19945371, 1)
+theme_override_colors/font_outline_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
+theme_override_fonts/font = ExtResource("2_gtid3")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = ExtResource("5_5cvai")
+theme_override_styles/pressed = ExtResource("6_es6ti")
+theme_override_styles/hover = ExtResource("6_domf7")
+
+[node name="Label" type="Label" parent="CanvasLayerLevels/GridContainer/Button13" unique_id=1510855319]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.53300005
+anchor_right = 0.5
+anchor_bottom = 0.541
+offset_left = -21.500008
+offset_top = -29.97501
+offset_right = 39.694023
+offset_bottom = 18.424992
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.67, 1.2)
+theme_override_colors/font_color = Color(0.9163782, 0.54233074, 0.19945371, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.43529412)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("6_3mro0")
+theme_override_font_sizes/font_size = 42
+text = "13"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button14" type="Button" parent="CanvasLayerLevels/GridContainer" unique_id=1534695415]
+self_modulate = Color(1, 1, 1, 0.9019608)
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9163782, 0.54233074, 0.19945371, 1)
+theme_override_colors/font_outline_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
+theme_override_fonts/font = ExtResource("2_gtid3")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = ExtResource("5_5cvai")
+theme_override_styles/pressed = ExtResource("6_es6ti")
+theme_override_styles/hover = ExtResource("6_domf7")
+
+[node name="Label" type="Label" parent="CanvasLayerLevels/GridContainer/Button14" unique_id=789752448]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.53300005
+anchor_right = 0.5
+anchor_bottom = 0.541
+offset_left = -21.500008
+offset_top = -28.97501
+offset_right = 39.694023
+offset_bottom = 19.424992
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.67, 1.2)
+theme_override_colors/font_color = Color(0.9163782, 0.54233074, 0.19945371, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.43529412)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("6_3mro0")
+theme_override_font_sizes/font_size = 42
+text = "14"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button15" type="Button" parent="CanvasLayerLevels/GridContainer" unique_id=1229858151]
+self_modulate = Color(1, 1, 1, 0.9019608)
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9163782, 0.54233074, 0.19945371, 1)
+theme_override_colors/font_outline_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
+theme_override_fonts/font = ExtResource("2_gtid3")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = ExtResource("5_5cvai")
+theme_override_styles/pressed = ExtResource("6_es6ti")
+theme_override_styles/hover = ExtResource("6_domf7")
+
+[node name="Label" type="Label" parent="CanvasLayerLevels/GridContainer/Button15" unique_id=1289870970]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.53300005
+anchor_right = 0.5
+anchor_bottom = 0.541
+offset_left = -21.500008
+offset_top = -28.97501
+offset_right = 39.694023
+offset_bottom = 19.424992
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.67, 1.2)
+theme_override_colors/font_color = Color(0.9163782, 0.54233074, 0.19945371, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.43529412)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("6_3mro0")
+theme_override_font_sizes/font_size = 42
+text = "15"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Close2" type="Button" parent="CanvasLayerLevels" unique_id=568753515]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 846.00006
+offset_top = 196.0
+offset_right = 868.00006
+offset_bottom = 218.0
+scale = Vector2(1.5, 1.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayerLevels/Close2" unique_id=2030774445]
+modulate = Color(0.56714934, 0.31300637, 0.056236967, 1)
+position = Vector2(11.33329, 11.333334)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("5_257up")
+
+[node name="TutorialButton" type="Button" parent="." unique_id=1576017206]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -4.0
+offset_right = 121.0
+offset_bottom = 46.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="TutorialButton" unique_id=1200241738]
+custom_maximum_size = Vector2(1000, -1)
+layout_mode = 0
+offset_top = -35.0
+offset_right = 800.0
+offset_bottom = 765.0
+scale = Vector2(0.37, 0.17)
+mouse_filter = 2
+texture = ExtResource("3_gtid3")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="TutorialButton" unique_id=1180705616]
+layout_mode = 0
+offset_left = 103.0
+offset_top = 18.0
+offset_right = 180.0
+offset_bottom = 41.0
+text = "TUTORIAL"
+
+[node name="StoryButton" type="Button" parent="." unique_id=864272789]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = 86.0
+offset_right = 121.0
+offset_bottom = 136.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="StoryButton" unique_id=1967411758]
+custom_maximum_size = Vector2(1000, -1)
+layout_mode = 0
+offset_top = -35.0
+offset_right = 800.0
+offset_bottom = 765.0
+scale = Vector2(0.37, 0.17)
+mouse_filter = 2
+texture = ExtResource("3_gtid3")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="StoryButton" unique_id=1007859608]
+layout_mode = 0
+offset_left = 103.0
+offset_top = 18.0
+offset_right = 180.0
+offset_bottom = 41.0
+text = "STORY"
+horizontal_alignment = 1
+
+[node name="CanvasLayerStory" type="CanvasLayer" parent="." unique_id=1307052367]
+visible = false
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayerStory" unique_id=380937400]
+modulate = Color(1, 1, 1, 0.7137255)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -236.0
+offset_top = -267.0
+offset_right = 164.83331
+offset_bottom = 188.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.2, 1.2)
+color = Color(0.2673042, 0.26730424, 0.2673042, 1)
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayerStory" unique_id=1388522449]
+anchors_preset = -1
+anchor_left = 0.503
+anchor_top = 0.5
+anchor_right = 0.503
+anchor_bottom = 0.5
+offset_left = -227.45605
+offset_top = -256.0
+offset_right = 152.54395
+offset_bottom = 179.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.2, 1.2)
+color = Color(0.0071415612, 0.0071415612, 0.0071415603, 1)
+
+[node name="StoryClose" type="Button" parent="CanvasLayerStory" unique_id=908964151]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 797.0
+offset_top = 48.0
+offset_right = 819.0
+offset_bottom = 70.0
+scale = Vector2(1.5, 1.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayerStory/StoryClose" unique_id=956609097]
+modulate = Color(0.56714934, 0.31300637, 0.056236967, 1)
+position = Vector2(11, 11)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("5_257up")
+
+[node name="Label" type="Label" parent="CanvasLayerStory" unique_id=1715590605]
+offset_left = 372.0
+offset_top = 152.0
+offset_right = 790.0
+offset_bottom = 574.0
+text = "In the year 2064, an alien invasion began on Planet Earth. 500 Hundred unique Jeffs were found and captured to find one capable of leading the Earthiens. A massive astronaut trianing centre was contructed by Earthians to find their saviour. 499  Jeffs have died in the training. Some believe completing the training is impossisible. There is only one Jeff left. YOU!! Prove that you are talented enough to beat the aliens and lead Earth!!   SUI!!"
+label_settings = SubResource("LabelSettings_yipmn")
+vertical_alignment = 3
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="CanvasLayerStory" unique_id=1091624881]
+offset_left = 480.0
+offset_top = 88.0
+offset_right = 654.0
+offset_bottom = 131.0
+text = "STORY"
+label_settings = SubResource("LabelSettings_ahfwt")
+
+[connection signal="pressed" from="LevelsButton" to="." method="_on_levels_button_pressed"]
+[connection signal="pressed" from="CanvasLayerLevels/Close2" to="." method="_on_close_2_pressed"]
+[connection signal="pressed" from="TutorialButton" to="." method="_on_tutorial_button_pressed"]
+[connection signal="pressed" from="StoryButton" to="." method="_on_story_open_pressed"]
+[connection signal="pressed" from="CanvasLayerStory/StoryClose" to="." method="_on_story_close_pressed"]

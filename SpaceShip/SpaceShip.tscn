@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://d2ybi2erw5ppc"]
+
+[ext_resource type="Script" uid="uid://70pipweykcdn" path="res://SpaceShip/SpaceshipBody.cs" id="1_n7683"]
+[ext_resource type="Texture2D" uid="uid://4j3620p5kgmq" path="res://SpaceShip/Rocketship-1--NicholasJudy456.svg" id="2_n7683"]
+[ext_resource type="Texture2D" uid="uid://ceyxm625x746n" path="res://SpaceShip/racing_flame.svg" id="3_mxenu"]
+[ext_resource type="AudioStream" uid="uid://da0e7bw0r68jl" path="res://SoundEffects/jci21-rocket-launch-sfx-253937.mp3" id="4_oa4mn"]
+
+[node name="SpaceShip" type="CharacterBody2D" unique_id=748652188]
+position = Vector2(100, 335)
+scale = Vector2(0.58, 0.58)
+script = ExtResource("1_n7683")
+
+[node name="ShipImg" type="Sprite2D" parent="." unique_id=1247049447]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("2_n7683")
+
+[node name="ShipImg2" type="Sprite2D" parent="ShipImg" unique_id=1018797165]
+modulate = Color(0, 0, 0, 1)
+scale = Vector2(0.91666675, 0.91666675)
+texture = ExtResource("2_n7683")
+
+[node name="ThrustImg" type="Sprite2D" parent="." unique_id=1642580921]
+position = Vector2(-54, 1.0000048)
+rotation = 3.1415927
+scale = Vector2(0.09, 0.143)
+texture = ExtResource("3_mxenu")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=449161081]
+position_smoothing_enabled = true
+position_smoothing_speed = 4.0
+drag_horizontal_enabled = true
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="." unique_id=502662663 groups=["Spaceship"]]
+scale = Vector2(1.0000004, 1.0000004)
+polygon = PackedVector2Array(-29.310349, -15.517273, -24.13794, -5.1724243, -31.034485, -5.1724243, -31.034485, 5.1723633, -24.13794, 5.1723633, -29.310349, 15.517212, -15.517242, 15.517212, -15.517242, 15.517212, -10.344833, 6.8965454, 17.241379, 8.6206665, 27.586212, 5.1723633, 32.75862, 0, 27.586212, -3.4483032, 17.241379, -8.620728, -10.344833, -6.8966064, -15.517242, -15.517273)
+
+[node name="ShipHurtBox" type="Area2D" parent="." unique_id=1684327224 groups=["Spaceship"]]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ShipHurtBox" unique_id=1912757252 groups=["Spaceship"]]
+scale = Vector2(1.0000001, 1.0000001)
+polygon = PackedVector2Array(-29.310349, -15.517273, -24.13794, -5.1724243, -31.034485, -5.1724243, -31.034485, 5.1723633, -24.13794, 5.1723633, -29.310349, 15.517212, -15.517242, 15.517212, -15.517242, 15.517212, -10.344833, 6.8965454, 17.241379, 8.6206665, 27.586212, 5.1723633, 32.75862, 0, 27.586212, -3.4483032, 17.241379, -8.620728, -10.344833, -6.8966064, -15.517242, -15.517273)
+
+[node name="BoostSound" type="AudioStreamPlayer" parent="." unique_id=1593609860]
+stream = ExtResource("4_oa4mn")
+parameters/looping = true

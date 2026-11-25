@@ -1,0 +1,21 @@
+# Godot 4+ specific ignores
+.godot/
+*.import
+export.cfg
+export_presets.cfg
+
+# C# / Mono specific ignores
+.mono/
+obj/
+bin/
+[Bb]in/
+[Oo]bj/
+
+# VS Code specific ignores
+.vscode/
+*.suo
+*.user
+*.userprefs
+*.sln.docstates
+*.exe 
+data_Project*/ 

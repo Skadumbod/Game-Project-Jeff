@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://b8gcawqxe3qnj"]
+
+[ext_resource type="Script" uid="uid://85a5aeah43hy" path="res://PickupBolt.cs" id="1_ajq1y"]
+[ext_resource type="Texture2D" uid="uid://do3250l7bjfwx" path="res://Images/bolt2png.png" id="2_ta4r4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n64fp"]
+size = Vector2(52.93521, 95.014084)
+
+[node name="Bolt" type="Node2D" unique_id=179874734]
+position = Vector2(500, 300)
+scale = Vector2(0.3, 0.3)
+script = ExtResource("1_ajq1y")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=515619690]
+rotation = 0.5235988
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_ta4r4")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=476916956]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=41203387]
+position = Vector2(-0.25656128, -0.45751953)
+rotation = 0.5235988
+shape = SubResource("RectangleShape2D_n64fp")
+
+[node name="OscillationTimer" type="Timer" parent="." unique_id=1740362811]
+wait_time = 0.8
+autostart = true
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_boltpickup_area_entered"]

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bnaqmrk51xc7k"]
+
+[ext_resource type="Texture2D" uid="uid://b1e5j7bygpdm" path="res://Images/2D_pixelart_starfield_detail_image.png" id="1_l3thc"]
+
+[node name="Parallax2D" type="Parallax2D" unique_id=1247399571]
+scale = Vector2(2, 2)
+scroll_scale = Vector2(0.2, 0.2)
+autoscroll = Vector2(-20, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1687688013]
+position = Vector2(0, -0.5)
+texture = ExtResource("1_l3thc")
+centered = false
